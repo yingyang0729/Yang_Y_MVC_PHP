@@ -45,7 +45,7 @@ public function loadViews() {
 	}else if(isset($_GET['str'])) {
 		//run query method B on the model
 		//load view(s) to match THAT model data
-		$employees = $this->model->search('emp_lname',$_GET['str']);
+		$employees = $this->model->search('lname',$_GET['str']);
 		$rows = $this->model->rows;
 		require_once('views/emp_list.php');
 
@@ -57,7 +57,7 @@ public function loadViews() {
 	}else if(isset($_GET['task'])) {
 		if($_GET['task'] == 'create') {
 			//POST values from a form
-			$formvalues = [$_POST['emp_lname'],$_POST['emp_fname'],$_POST['emp_job'],'person3.jpg','person3th.jpg'];
+			$formvalues = [$_POST['lname'],$_POST['fname'],$_POST['job'],'person3.jpg','person3th.jpg'];
 			$employees = $this->model->newEmployee($formvalues);
 			header("location:index.php");
 		}else if($_GET['task'] == 'delete') {
@@ -65,7 +65,7 @@ public function loadViews() {
 			header("location:index.php");
 		}else if($_GET['task'] == 'update') {
 			//POST values from a form, could also be hidden field for id value
-	$formvalues = [$_POST['emp_lname'],$_POST['emp_fname'],$_POST['emp_job'],'person3.jpg','person3th.jpg',$_GET['id']];
+	$formvalues = [$_POST['lname'],$_POST['fname'],$_POST['job'],'person3.jpg','person3th.jpg',$_GET['id']];
 			$employees = $this->model->updateEmployee($formvalues);
 			header("location:index.php");
 		}
