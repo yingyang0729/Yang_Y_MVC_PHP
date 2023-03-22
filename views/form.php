@@ -10,15 +10,15 @@
 			<div class="container">
 			<div class="form-group">
 				
-				<input type="text" name="emp_fname" class="form-control" id="emp_fname" placeholder="First Name" value="">
+				<input type="text" name="fname" class="form-control" id="fname" placeholder="First Name" value="">
 			</div>
 
 			<div class="form-group">
-				<input type="text" name="emp_lname" class="form-control" id="emp_lname" placeholder="Last Name" value="">
+				<input type="text" name="lname" class="form-control" id="lname" placeholder="Last Name" value="">
 			</div>
 
 			<div class="form-group">
-				<input type="text" name="emp_job" class="form-control" id="emp_job"  placeholder="Username" value="">
+				<input type="text" name="job" class="form-control" id="job"  placeholder="Username" value="">
 			</div>
 			</div>
 
